@@ -51,15 +51,8 @@ def minus_one(x):
 
 
 def heavy_minus_one(x):
-    # Heavy computation for ~0.125 seconds
-    now = time()
-    while (time() - now) < 0.125:
-        # random cpu stuff
-        p = 123123
-        for i in range(p):
-            p += 1
-        p = 123112312321
-        p = p * p * 2
+    # This will eat up a significant amount of both cpu and ram
+    res = sum(list(range(1000000)))
     return x - 1
 
 
