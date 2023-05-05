@@ -30,6 +30,11 @@ Surprisingly, the overall time of execution is slightly better too. Not signific
 
 ## Results
 
+You can plot the results by running:
+```sh
+./plot.sh
+```
+
 ### Partitioned input
 ![partitioned](./results/partitioned.png)
 ![partitioned-heavy-map](./results/partitioned-heavy-map.png)
