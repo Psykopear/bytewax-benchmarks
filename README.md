@@ -36,13 +36,21 @@ You can plot the results by running:
 ```
 
 ### Partitioned input
+#### Fast input, fast operations
 ![partitioned](./results/partitioned.png)
+#### Fast input, cpu heavy operations
 ![partitioned-heavy-map](./results/partitioned-heavy-map.png)
+#### Long input, fast operations
 ![partitioned-long-input](./results/partitioned-long-input.png)
+#### Long input, cpu heavy operations
 ![partitioned-long-input-heavy-map](./results/partitioned-long-input-heavy-map.png)
 
 ### Dynamic input
+#### Fast input, fast operations
 ![dynamic](./results/dynamic.png)
+#### Fast input, cpu heavy operations
 ![dynamic-heavy-map](./results/dynamic-heavy-map.png)
+#### Long input, fast operations
 ![dynamic-long-input](./results/dynamic-long-input.png)
+#### Long input, cpu heavy operations
 ![dynamic-long-input-heavy-map](./results/dynamic-long-input-heavy-map.png)
