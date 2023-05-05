@@ -20,10 +20,24 @@ The `compare.sh` script accepts a list of commit hashs, or tags, or revisions.
 It will create a virtualenv for each of those, and run the dataflows with all the versions specified:
 
 ```sh
-./compare.sh v0.16.0 a02a6f6 8be5991
+./compare.sh v0.16.0 7b8caa3
 ```
 
 By asking the workers to be parked for as little as 1ms before reactivating again, the overall cpu usage drops dramatically.  
 In a run with 16 processes (same number as threads on my laptop), with an input that waits before outputting items, without heavy computations, system time goes from ~50s down to ~3s.  
 This is due to the fact that we are not polling the input as fast as possible anymore.  
 Surprisingly, the overall time of execution is slightly better too. Not significantly better, but constantly so.  
+
+## Results
+
+### Partitioned input
+![partitioned](./results/partitioned.png)
+![partitioned-heavy-map](./results/partitioned-heavy-map.png)
+![partitioned-long-input](./results/partitioned-long-input.png)
+![partitioned-long-input-heavy-map](./results/partitioned-long-input-heavy-map.png)
+
+### Dynamic input
+![dynamic](./results/dynamic.png)
+![dynamic-heavy-map](./results/dynamic-heavy-map.png)
+![dynamic-long-input](./results/dynamic-long-input.png)
+![dynamic-long-input-heavy-map](./results/dynamic-long-input-heavy-map.png)
