@@ -14,19 +14,21 @@ args = parser.parse_args()
 with open(args.file) as f:
     results = json.load(f)["results"]
 
-yellow = "#fab90f"
 black = "#171717"
-white = "#e5e5e5"
+grey = "#c7c7c7"
+yellow = "#fab90f"
+white = "#f5f5f5"
 
 revisions = [i["command"].partition("/")[0] for i in results]
 x = np.arange(3)  # the label locations
-width = 0.3  # the width of the bars
+width = 0.20  # the width of the bars
 
 fig, ax = plt.subplots(layout="constrained")
+fig.set_size_inches(10, 5)
 fig.patch.set_facecolor(white)
 ax.set_facecolor(white)
 
-colors = [black, yellow, white]
+colors = [black, grey, yellow, white]
 
 multiplier = 0
 for i, result in enumerate(results):
@@ -46,10 +48,10 @@ for i, result in enumerate(results):
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel("Time (s)", color=black)
 ax.set_title("CPU times", color=black)
-ax.set_xticks(x + width / 2, ["Real", "System", "User"])
+ax.set_xticks(x + (width * len(revisions)) / 2 - width / 2, ["Real", "System", "User"])
 fig.legend(loc="outside upper left", ncols=len(revisions))
 
 if args.output:
-    plt.savefig(args.output)
+    plt.savefig(args.output, dpi=199)
 else:
     plt.show()
