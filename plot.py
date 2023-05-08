@@ -18,7 +18,7 @@ yellow = "#fab90f"
 black = "#171717"
 white = "#e5e5e5"
 
-commands = [i["command"].partition("/")[0] for i in results]
+revisions = [i["command"].partition("/")[0] for i in results]
 x = np.arange(3)  # the label locations
 width = 0.3  # the width of the bars
 
@@ -26,30 +26,28 @@ fig, ax = plt.subplots(layout="constrained")
 fig.patch.set_facecolor(white)
 ax.set_facecolor(white)
 
-edgecolor = yellow
-color = black
+colors = [black, yellow, white]
 
 multiplier = 0
-for result in results:
+for i, result in enumerate(results):
     offset = width * multiplier
     rects = ax.bar(
         x + offset,
         (result["mean"], result["user"], result["system"]),
         width,
         label=result["command"].partition("/")[0],
-        color=color,
-        edgecolor=edgecolor,
+        color=colors[i % len(colors)],
+        edgecolor=black,
         linewidth=1,
     )
-    color, edgecolor = edgecolor, color
-    ax.bar_label(rects, padding=3, color=black)
+    ax.bar_label(rects, padding=3, color=black, fmt="%.3f")
     multiplier += 1
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel("Time (s)", color=black)
 ax.set_title("CPU times", color=black)
 ax.set_xticks(x + width / 2, ["Real", "System", "User"])
-fig.legend(loc="outside upper left", ncols=len(commands))
+fig.legend(loc="outside upper left", ncols=len(revisions))
 
 if args.output:
     plt.savefig(args.output)
