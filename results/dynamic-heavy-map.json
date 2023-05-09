@@ -1,25 +1,25 @@
 {
   "results": [
     {
-      "command": ".bytewax-main/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
-      "mean": 3.2386670689200003,
-      "stddev": 0.1622815658994522,
-      "median": 3.23676721612,
-      "user": 27.70090646,
-      "system": 10.9640621,
-      "min": 3.01033254762,
-      "max": 3.5598729016200004,
+      "command": ".bytewax-b1bc759/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
+      "mean": 3.0381276193,
+      "stddev": 0.036405458421451986,
+      "median": 3.0257796454,
+      "user": 19.519926719999994,
+      "system": 11.90432762,
+      "min": 3.0160845264,
+      "max": 3.1394206793999997,
       "times": [
-        3.19768356462,
-        3.01033254762,
-        3.02035939562,
-        3.18840474962,
-        3.40663137562,
-        3.23181891562,
-        3.25501416062,
-        3.2417155166200002,
-        3.5598729016200004,
-        3.27483756162
+        3.0268653484,
+        3.0243892744,
+        3.0239184384,
+        3.0242236524,
+        3.0256636144,
+        3.0258956764,
+        3.0283183863999996,
+        3.0160845264,
+        3.0464965964,
+        3.1394206793999997
       ],
       "exit_codes": [
         0,
@@ -34,29 +34,29 @@
         0
       ],
       "parameters": {
-        "python": ".bytewax-main/bin/python"
+        "python": ".bytewax-b1bc759/bin/python"
       }
     },
     {
-      "command": ".bytewax-08939c7/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
-      "mean": 3.09011823072,
-      "stddev": 0.0337376081578942,
-      "median": 3.0904302766200002,
-      "user": 20.20108776,
-      "system": 11.255474099999999,
-      "min": 3.04484759262,
-      "max": 3.16904048062,
+      "command": ".bytewax-9ae21a2/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
+      "mean": 3.1248761875,
+      "stddev": 0.00883915710155412,
+      "median": 3.1244550284,
+      "user": 21.066167019999998,
+      "system": 11.28615652,
+      "min": 3.1109623114,
+      "max": 3.1390971343999996,
       "times": [
-        3.16904048062,
-        3.07565899762,
-        3.09574821162,
-        3.06435412562,
-        3.10006315662,
-        3.10670299362,
-        3.04484759262,
-        3.09066155062,
-        3.06390619562,
-        3.09019900262
+        3.1390971343999996,
+        3.1364034714,
+        3.1221880584,
+        3.1155701454,
+        3.1232728834,
+        3.1281681864,
+        3.1109623114,
+        3.1180730933999996,
+        3.1256371734,
+        3.1293894173999997
       ],
       "exit_codes": [
         0,
@@ -71,29 +71,29 @@
         0
       ],
       "parameters": {
-        "python": ".bytewax-08939c7/bin/python"
+        "python": ".bytewax-9ae21a2/bin/python"
       }
     },
     {
-      "command": ".bytewax-af89c20/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
-      "mean": 3.0556707992200005,
-      "stddev": 0.024951710896873806,
-      "median": 3.04668634662,
-      "user": 20.96477436,
-      "system": 9.961020099999999,
-      "min": 3.0259608456200002,
-      "max": 3.10498381262,
+      "command": ".bytewax-8b5a9d7/bin/python -m bytewax.run \"dataflows.dynamic:get_flow(long_input=False, heavy_map=True)\" -p16",
+      "mean": 3.1180445213999994,
+      "stddev": 0.006287893626881656,
+      "median": 3.1191333919,
+      "user": 20.849827819999998,
+      "system": 11.25257572,
+      "min": 3.1074059004,
+      "max": 3.1255139254,
       "times": [
-        3.03749832062,
-        3.04410009062,
-        3.05642661062,
-        3.04255615862,
-        3.10498381262,
-        3.0259608456200002,
-        3.08913430962,
-        3.0378798536200002,
-        3.04927260262,
-        3.06889538762
+        3.1240984324,
+        3.1211364834,
+        3.1116759024,
+        3.1074059004,
+        3.1245893764,
+        3.1168782064,
+        3.1201828394,
+        3.1180839444,
+        3.1108802034,
+        3.1255139254
       ],
       "exit_codes": [
         0,
@@ -108,7 +108,7 @@
         0
       ],
       "parameters": {
-        "python": ".bytewax-af89c20/bin/python"
+        "python": ".bytewax-8b5a9d7/bin/python"
       }
     }
   ]
