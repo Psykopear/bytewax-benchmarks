@@ -16,19 +16,20 @@ with open(args.file) as f:
 
 black = "#171717"
 grey = "#c7c7c7"
+grey2 = "#575757"
 yellow = "#fab90f"
 white = "#f5f5f5"
 
 revisions = [i["command"].partition("/")[0] for i in results]
 x = np.arange(3)  # the label locations
-width = 0.20  # the width of the bars
+width = 0.15  # the width of the bars
 
 fig, ax = plt.subplots(layout="constrained")
-fig.set_size_inches(10, 5)
+fig.set_size_inches(15, 5)
 fig.patch.set_facecolor(white)
 ax.set_facecolor(white)
 
-colors = [black, grey, yellow, white]
+colors = [black, grey, yellow, white, grey2]
 
 multiplier = 0
 for i, result in enumerate(results):
